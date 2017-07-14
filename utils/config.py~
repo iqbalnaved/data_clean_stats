@@ -1,0 +1,65 @@
+#Configuration file - change values here
+#path = '/home/purepredictive/clients/'
+import os
+
+#====General configuration====
+
+dir_path = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+path = os.path.dirname(os.path.dirname(os.path.dirname(dir_path)))
+##print dir_path
+##print path
+
+filename = 'joined.csv'
+##filename = 'james_race.csv'
+#filename = 'wgu_admissions_joined_csvs.csv'
+#filename = 'choice_fall_joined_csvs.csv' #choice
+#filename = 'rawcrest1.csv' #crest
+
+clientname = 'testclient'
+#clientname = 'jamesrace'
+#clientname = 'wgu'
+#clientname = 'choice'
+#clientname = 'crest'
+
+ensemble = 'testensemble'
+#ensemble = 'willfinish'#jamesrace
+#ensemble = 'admissions'
+#ensemble = 'fall' #choice
+#ensemble = 'fall' #choice
+#ensemble = 'bad_loan' #crest
+
+fieldSeparator = [',',',',',']
+#fieldSeparator = [';',',',';',',',',',',',',']
+
+extension = '.csv'
+
+has_label = True #target concept boolean flag
+
+key = 'StudentID'
+
+#paths
+basePath = path + '/clients/' + clientname + '/ensembles/' + ensemble + '/input/data/'
+print basePath
+
+#====Scrubber configuration====
+initial_null_limit_percent = 80
+initial_upper_limit_abs = 50
+initial_upper_limit_percent = 90
+#numerical_upper_limit = 10000000
+categorical_upper_limit_abs = 50
+categorical_upper_limit_percent = 99
+
+#====date formats=====
+#date_format_string = ['%m/%d/%y','%Y-%m-%d','%m/%d/%y']  #James race
+date_format_string = ['%Y-%m-%d','%m/%d/%y','%m/%d/%y']  #James race
+#date_format_string = ['%m/%d/%Y']  #wgu
+#date_format_string = ['%Y-%m-%d %H:%M:%S']  #scala
+#date_format_string = ['%m/%d/%y']  #progressive credit
+#date_format_string = ['%m/%d/%Y %H:%M:%S']#choice
+#date_format_string = ['%m/%d/%y']#crest
+
+#====override ====
+numerical_override = []
+categorical_override = []
+date_override = []
+geo_override = []

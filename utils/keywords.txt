@@ -1,0 +1,4 @@
+date, dob, timestamp
+zip, postal
+owner, contact, status, code, id, type, size, level, categor, difficult, experience, group, course, label, address, index, phone, record, model, make, question, since, contact, claim, #, A/N, version, rspnse, indictr, havedrvrslcnsnmbr, response, have, indctr, indicator
+amt, amnt, qty, amount, income

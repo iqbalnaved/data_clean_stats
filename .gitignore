@@ -1,0 +1,7 @@
+*.pyc
+*.trf.csv
+*.meta
+*.log
+*.swp
+tags
+.coverage
